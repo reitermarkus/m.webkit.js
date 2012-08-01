@@ -41,14 +41,15 @@ Be sure to check if your title doesn't exceed the character limit, which I found
 
 To set your icons, add this to your `<head>`. For more information on why it is in this order, please [read the related article](http://mathiasbynens.be/notes/touch-icons) by [@mathiasbynens](https://github.com/mathiasbynens).
 
-    <!-- Third-generation iPad Retina display: -->
+    <!-- Retina iPad -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
-    <!-- iPhone with Retina display -->
+    <!-- Retina iPhone -->
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
-    <!-- First- and second-generation iPad -->
+    <!-- Non-Retina iPad -->
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
     <!-- Non-Retina iPhone, iPod Touch, and Android 2.1+ devices -->
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
 
 ## Web Apps
 
