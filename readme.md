@@ -36,19 +36,19 @@ This fix disables zoom when the device is rotated, so that is doesn't zoom in th
 
 ### Web Apps
 
-#### The Title
+**The Title**
 
 Be sure to check if your title doesn't exceed the character limit, which I found is at about 12-13, depending on which characters it contains. You will have to experiment.
 
     <title>My Web App</title>
 
-#### Make it Full-Screen
+**Make it Full-Screen**
 
 To make your App an App, rather than a bookmark, add this meta tag to your `<head>`.
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-#### The Status Bar Style
+**The Status Bar Style**
 
 There are three styles to choose from: `default`, `black`, and `black-translucent`. Change it respectively.
 
