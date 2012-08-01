@@ -12,7 +12,7 @@ In this kit you find some useful features and bug fixes, and also some tips for 
 
 # What's inside?
 
-### Only open outgoing links in Safari when added as [Full-Screen App](#make-it-full-screen) to the Home Screen
+### When added as [Full-Screen App](#make-it-full-screen), only open outgoing links in Safari  
 By default, when added to home screen, it will launch as a fullscreen web app. 
 And all links will open up MobileSafari with a new tab.  
 This fix detects internal links, so that only outgoing links open in a new Safari tab.  
