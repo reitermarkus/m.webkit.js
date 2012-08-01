@@ -10,6 +10,8 @@
 In this kit you find some useful features and bug fixes, and also some tips for your Mobile Web Development.
 
 
+<br />
+
 ## What's inside?
 
 ### 1. Only open outgoing links in Safari when added to homescreen
@@ -28,8 +30,7 @@ This fix disables zoom when the device is rotated, so that is doesn't zoom in th
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     
     
-    
-
+<br />
 
 ## Useful Tips and Tricks
 
