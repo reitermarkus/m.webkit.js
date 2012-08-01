@@ -22,7 +22,7 @@ This fix detects internal links, so that only outgoing links open in a new Safar
 When you open a page in MobileSafari the URL bar is visible by default.  
 This fix scrolls to the top on page load so the URL bar is hidden.  
 
-### MobileSafari Orientation Change Fix (by [@scottehl](https://github.com/scottjehl/iOS-Orientationchange-Fix))  
+### MobileSafari [Orientation Change Fix by @scottehl](https://github.com/scottjehl/iOS-Orientationchange-Fix)  
 This fix disables zoom when the device is rotated, so that is doesn't zoom in the page when going into landscape.  
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -39,7 +39,7 @@ Be sure to check if your title doesn't exceed the character limit, which I found
 
 ## Bookmark Icons
 
-To set your icons, add this to your `<head>`. For more information on why it is in this order, please read the related article by [@mathiasbynens](https://github.com/mathiasbynens): [Everything you always wanted to know about touch icons](http://mathiasbynens.be/notes/touch-icons)
+To set your icons, add this to your `<head>`. For more information on why it is in this order, please [read the related article](http://mathiasbynens.be/notes/touch-icons) by [@mathiasbynens](https://github.com/mathiasbynens).
 
     <!-- Third-generation iPad Retina display: -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
