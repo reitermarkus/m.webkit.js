@@ -5,14 +5,14 @@
 <br />
 
 
-## About
+# About
 
 In this kit you find some useful features and bug fixes, and also some tips for your Mobile Web Development.
 
 
 <br />
 
-## What's inside?
+# What's inside?
 
 ### 1. Only open outgoing links in Safari when added to homescreen
 By default, when added to home screen, it will launch as a fullscreen web app. And all links will open up MobileSafari with a new tab.  
@@ -32,9 +32,9 @@ This fix disables zoom when the device is rotated, so that is doesn't zoom in th
     
 <br />
 
-## Useful Tips and Tricks
+# Useful Tips and Tricks
 
-### Web Apps
+## Web Apps
 
 ##### The Title
 Be sure to check if your title doesn't exceed the character limit, which I found is at about 12-13, depending on which characters it contains. You will have to experiment.
@@ -54,7 +54,7 @@ There are three styles to choose from: `default`, `black`, and `black-translucen
 
 <br />
 
-### Disable automatic Phone-Number-Detection
+## Disable automatic Phone-Number-Detection
 
 With this meta-tag you can disable the automatic phone-number-detection on iOS and some Android Devices:
   
@@ -63,7 +63,7 @@ With this meta-tag you can disable the automatic phone-number-detection on iOS a
 
 <br />
 
-### Native Overflow-Scrolling
+## Native Overflow-Scrolling
 
 In iOS 5 there is a new CSS property. Be sure to add the following to any selector that also has `overflow: scroll` set:
 
