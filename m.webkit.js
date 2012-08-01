@@ -8,7 +8,6 @@
 
 */
 
-
 window.onload = (function MobileWebKit(w){
 
 	var	thisDomain;
@@ -25,15 +24,11 @@ window.onload = (function MobileWebKit(w){
 		        return this.current.match(this.pattern)[1];
 		    }
 		}
-		
-		console.log(thisDomain);
-		
+
 		if(thisDomain == undefined || thisDomain.length === 0) {
 			thisDomain = URL.getCurrent();
 		}
-		
-		console.log(thisDomain);
-		
+
 		var a = document.getElementsByTagName('a');
 
 		setTimeout(function(){
@@ -131,7 +126,3 @@ window.onload = (function MobileWebKit(w){
 	}
 	w.initialize();
 })( this );
-
-
-/*! Doesn't open links in a new Safari windows when added to home screen */ /* (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone"); */
-
