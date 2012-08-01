@@ -2,7 +2,9 @@
 
 ---------------
 
-## What does it do?
+
+
+## What does it do?  
 
 ### 1. Fix for web app links  
 By default, when added to home screen, it will launch as a fullscreen web app. And all links will open up MobileSafari with a new tab.  
