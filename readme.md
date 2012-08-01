@@ -53,12 +53,12 @@ To set your icons, add this to your `<head>`. For more information on why it is 
 
 ## Web Apps
 
-##### Make it Full-Screen
+### Make it Full-Screen
 To make your App an App, rather than a bookmark, add this meta tag to your `<head>`.
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-##### The Status Bar Style
+### The Status Bar Style
 There are three styles to choose from: `default`, `black`, and `black-translucent`. Change it respectively.
 
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />  
