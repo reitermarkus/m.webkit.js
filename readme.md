@@ -31,12 +31,26 @@ This fix disables zoom when the device is rotated, so that is doesn't zoom in th
 
 # Useful Tips and Tricks
 
-## Web Apps
 
-##### The Title
+## The Title
 Be sure to check if your title doesn't exceed the character limit, which I found is at about 12-13, depending on which characters it contains. You will have to experiment.
 
     <title>My Web App</title>
+
+## Bookmark Icons
+
+To set your icons, add this to your `<head>`. For more information on why it is in this order, please read the related article by [@mathiasbynens](https://github.com/mathiasbynens): [Everything you always wanted to know about touch icons](http://mathiasbynens.be/notes/touch-icons)
+
+    <!-- Third-generation iPad Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+    <!-- iPhone with Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <!-- First- and second-generation iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <!-- Non-Retina iPhone, iPod Touch, and Android 2.1+ devices -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+## Web Apps
 
 ##### Make it Full-Screen
 To make your App an App, rather than a bookmark, add this meta tag to your `<head>`.
