@@ -1,7 +1,7 @@
 # Mobile WebKit
 
 ---------------
-<br />
+
 <br />
 
 ## What does it do?  
