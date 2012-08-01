@@ -2,7 +2,7 @@
 
 ---------------
 
-## What does it do?**
+## What does it do?
 <br />
 <br />
 ### 1. Fix for web app links  
