@@ -46,13 +46,13 @@ To make your App an App, rather than a bookmark, add this meta tag to your `<hea
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-T##### he Status Bar Style
+##### The Status Bar Style
 There are three styles to choose from: `default`, `black`, and `black-translucent`. Change it respectively.
 
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />  
 
 
-
+------
 
 ### Disable automatic Phone-Number-Detection
 
