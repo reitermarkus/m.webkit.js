@@ -53,7 +53,7 @@ There are three styles to choose from: `default`, `black`, and `black-translucen
 
 ## Disable automatic Phone-Number-Detection
 
-With this meta-tag you can disable the automatic phone-number-detection on iOS and some Android Devices:
+With this meta-tag you can disable the automatic phone-number-detection on iOS and also some Android Devices.
   
     <meta name="format-detection" content="telephone=no">
 
@@ -62,7 +62,7 @@ With this meta-tag you can disable the automatic phone-number-detection on iOS a
 
 ## Native Overflow-Scrolling
 
-In iOS 5 there is a new CSS property. Be sure to add the following to any selector that also has `overflow: scroll` set:
+In iOS 5 there is a new CSS property. Be sure to add the following to any selector that also has `overflow: scroll` set.
 
     -webkit-overflow-scrolling: touch;
 
