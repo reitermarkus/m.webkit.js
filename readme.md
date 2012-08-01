@@ -55,7 +55,7 @@ There are three styles to choose from: `default`, `black`, and `black-translucen
 
 With this meta-tag you can disable the automatic phone-number-detection on iOS and also some Android Devices.
   
-    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="telephone=no" />
 
 
 <br />
