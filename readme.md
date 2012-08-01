@@ -3,8 +3,7 @@
 ---------------
 
 ## What does it do?
-<br />
-<br />
+
 ### 1. Fix for web app links  
 By default, when added to home screen, it will launch as a fullscreen web app. And all links will open up MobileSafari with a new tab.   
 This fix detects internal links, so that only outgoing links open in a new Safari tab.   
