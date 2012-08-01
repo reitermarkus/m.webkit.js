@@ -12,13 +12,13 @@ In this kit you find some useful features and bug fixes, and also some tips for 
 
 # What's inside?
 
-### 1. Only open outgoing links in Safari when added as [Full-Screen App](#make-it-full-screen) to the Home Screen
+### Only open outgoing links in Safari when added as [Full-Screen App](#make-it-full-screen) to the Home Screen
 By default, when added to home screen, it will launch as a fullscreen web app. 
 And all links will open up MobileSafari with a new tab.  
 This fix detects internal links, so that only outgoing links open in a new Safari tab.  
 
 
-### 2. Hide top URL bar (scroll to top) on page refresh in Mobile Safari  
+### Hide top URL bar (scroll to top) on page refresh in Mobile Safari  
 When you open a page in MobileSafari the URL bar is visible by default. 
 This fix scrolls to the top on page load so the URL bar is hidden.  
 
