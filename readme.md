@@ -22,7 +22,7 @@ This fix detects internal links, so that only outgoing links open in a new Safar
 When you open a page in MobileSafari the URL bar is visible by default. 
 This fix scrolls to the top on page load so the URL bar is hidden.  
 
-### MobileSafari [Orientation Change Fix by @scottehl](https://github.com/scottjehl/iOS-Orientationchange-Fix)  
+### MobileSafari [Orientation Change Fix](https://github.com/scottjehl/iOS-Orientationchange-Fix) by [@scottehl](https://github.com/scottjehl)  
 This fix disables zoom when the device is rotated, so that is doesn't zoom in the page when going into landscape. For this to work set the following meta tag.
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
