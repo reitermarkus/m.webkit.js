@@ -12,18 +12,18 @@ In this kit you find some useful features and bug fixes, and also some tips for 
 
 # What's inside?
 
-### 1. Only open outgoing links in Safari when added to homescreen
-By default, when added to home screen, it will launch as a fullscreen web app. And all links will open up MobileSafari with a new tab.  
+### 1. Only open outgoing links in Safari when added as Full-Screen App to the Home Screen
+By default, when added to home screen, it will launch as a fullscreen web app. 
+And all links will open up MobileSafari with a new tab.  
 This fix detects internal links, so that only outgoing links open in a new Safari tab.  
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
 
 ### 2. Hide top URL bar (scroll to top) on page refresh in Mobile Safari  
-When you open a page in MobileSafari the URL bar is visible by default.  
+When you open a page in MobileSafari the URL bar is visible by default. 
 This fix scrolls to the top on page load so the URL bar is hidden.  
 
 ### MobileSafari [Orientation Change Fix by @scottehl](https://github.com/scottjehl/iOS-Orientationchange-Fix)  
-This fix disables zoom when the device is rotated, so that is doesn't zoom in the page when going into landscape.  
+This fix disables zoom when the device is rotated, so that is doesn't zoom in the page when going into landscape. For this to work set the following meta tag.
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     
