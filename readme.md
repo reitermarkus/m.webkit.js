@@ -49,7 +49,6 @@ There are three styles to choose from: `default`, `black`, and `black-translucen
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />  
 
 
-<br />
 
 ## Disable automatic Phone-Number-Detection
 
@@ -58,7 +57,6 @@ With this meta-tag you can disable the automatic phone-number-detection on iOS a
     <meta name="format-detection" content="telephone=no" />
 
 
-<br />
 
 ## Native Overflow-Scrolling
 
