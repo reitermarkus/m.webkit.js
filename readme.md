@@ -25,7 +25,7 @@ This fix scrolls to the top on page load so the URL bar is hidden.
 ### MobileSafari [Orientation Change Fix by @scottehl](https://github.com/scottjehl/iOS-Orientationchange-Fix)  
 This fix disables zoom when the device is rotated, so that is doesn't zoom in the page when going into landscape. For this to work set the following meta tag.
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
 
 
@@ -42,13 +42,13 @@ Be sure to check if your title doesn't exceed the character limit, which I found
 To set your icons, add this to your `<head>`. For more information on why it is in this order, please [read the related article](http://mathiasbynens.be/notes/touch-icons) by [@mathiasbynens](https://github.com/mathiasbynens).
 
     <!-- Retina iPad -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
     <!-- Retina iPhone -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
     <!-- Non-Retina iPad -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
     <!-- Non-Retina iPhone, iPod Touch, and Android 2.1+ devices -->
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
 
 
 ## Web Apps
