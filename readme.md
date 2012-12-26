@@ -62,6 +62,22 @@ There are three styles to choose from: `default`, `black`, and `black-translucen
 
     <meta name=apple-mobile-web-app-status-bar-style content=default>  
 
+### Add a startup image
+
+    
+    <!-- Retina iPad -->
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-2048x1536.png" sizes=2048x1536>
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-1536x2048.png" sizes=1536x2048>
+    <!-- iPad and iPad mini -->
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-1024x768.png" sizes=1024x768>
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-768x1024.png" sizes=768x1024>
+    <!-- iPhone 5 -->
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-640x1136.png" sizes=640x1136>
+    <!-- Retina iPhone -->
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-640x960.png" sizes=640x960>
+    <!-- iPhone -->
+    <link rel=apple-touch-startup-image href="apple-touch-startup-image-320x480.png">
+
 
 ## Disable automatic Phone-Number-Detection
 
