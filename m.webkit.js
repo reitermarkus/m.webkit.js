@@ -1,99 +1,91 @@
-/*! Mobile WebKit by Markus Reiter, @reitermarkus
-    
-    Small fixes for iOS.
+/*! m.webkit.js v1.1 | git.io/ax3e6A | @reitermarkus */
+;(function(d,w,n,l,s){
 
-    OrientationChangeFix:
-    Script by @scottjehl, rebound by @wilto, modified by Peter Wooster.
-    MIT / GPLv2 License.
-*/
+  w.onload = function() {
 
-window.onload = (function MobileWebKit(w){
+    hideAddressBar()
+    webAppLinks()
+    scaleBugFix()
 
-	(function initialize() { /* Comment out or delete the ones you don't need. */
+  }
 
-		OrientationChangeFix();
-		HideAdressBar();
-		WebAppLinks();
-	
-	})();
+  var standalone = s in n && n[s] // Check if added to Home Screen.
 
-	function HideAdressBar(){
-	/* Scrolls the page to top, so the URL bar is hidden when the page has loaded. */
-		setTimeout(function(){
-			window.scrollTo(0, 0.9); 
-		}, 50);
+  /* Hide the MobileSafari URL bar by scrolling the page to the top. */
+  function hideAddressBar() {
+  
+    /mobile/i.test(n.userAgent) && !l.hash && !standalone && setTimeout(
+      w.scrollTo(0, 0.9)
+    , 100)
 
-	}
+  }
 
-	function WebAppLinks() {
-	/*! Doesn't open links in a new Safari windows when added to home screen */
-		var	doc = document,
-				b = window.navigator,
-				s = "standalone";
+  /* Open only external links in a new MobileSafari window (resulting in exiting the Web App). */
+  function webAppLinks() {
 
-		if (s in b && b[s]) {
-			var	t, loc = doc.location,
-					f = /^(a|html)$/i;
+    if(standalone) {
+      var t
+         
+      d.addEventListener('click', function(e) {
+        t = e.target
+        
+        while(!/^(a|html)$/i.test(t.nodeName)) t = t.parentNode
+        
+        'href' in t && !(~t.href.indexOf('//') === 0 || ~t.href.indexOf(l.hostname) === 0) && (e.preventDefault(), l.href = t.href)
+       
+      }, !1)
+    }
+  }
+  
+  /* Address the infamous iOS scale bug if the orientation is changed. (By @scottjehl, modified by @wilto, @peterwooster, and @reitermarkus.) */
+  function scaleBugFix() {
 
-			doc.addEventListener("click", function(doc){
-				t = doc.target;
-				while(!f.test(t.nodeName)) t = t.parentNode;
-					"href" in t && (t.href.indexOf("http") || ~t.href.indexOf(loc.host)) && (doc.preventDefault(), loc.href = t.href)
-			}, !1)
-		}
-	}
+    // If not iOS or if Chrome for iOS, return.
+    var ua = n.userAgent
+    if(!(/iPhone|iPad|iPod/.test(n.platform) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf('AppleWebKit') > -1 && ua.indexOf('CriOS') === -1)) return
 
-	function OrientationChangeFix(){
-	/* This fix addresses an Mobile Safari iOS bug, so return early if the UA claims it's something else. */
-		var ua = navigator.userAgent;
-		if( !( /iPhone|iPad|iPod/.test( navigator.platform ) 
-						&& /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) 
-						&& ua.indexOf( "AppleWebKit" ) > -1
-						&& ua.indexOf( "CriOS") == -1 )){ // chrome for iOS doesn't have the bug
-			return;
-		}
+    if(!d.querySelector) return
+    var meta = d.querySelector('meta[name=viewport]')
+    if(!meta) return
 
-		var doc = w.document;
+    var initialContent = meta && meta.getAttribute('content')
+       ,disabledZoom = initialContent + ',maximum-scale=1'
+       ,enabledZoom = initialContent + ',maximum-scale=10'
+       ,enabled = true
+       ,x, y, z, aig
 
-		if( !doc.querySelector ){ return; }
-		var meta = doc.querySelector( "meta[name=viewport]" );
-		if( !meta ){ return; }
-		var initialContent = meta && meta.getAttribute( "content" );
-		var disabledZoom = initialContent + ",maximum-scale=1";
-		var enabledZoom = initialContent + ",maximum-scale=10";
-		var enabled = true;
-		var	x, y, z, aig;
-		function restoreZoom(){
-			meta.setAttribute( "content", enabledZoom );
-			enabled = true;
-		}
-
-		function disableZoom(){
-			meta.setAttribute( "content", disabledZoom );
-			enabled = false;
-		}
-
-		function checkTilt( e ){
-			var ori = w.orientation;
-			// if it's landscape we're out of here
-			if(90 == Math.abs(w.orientation)) {
-				if(enabled)restoreZoom();
-				return;
-			} 
-	
-			aig = e.accelerationIncludingGravity;
-			x = Math.abs( aig.x );
-			y = Math.abs( aig.y );
-
-				// If in the danger zone where x is much greater than y turn off zoom
-			if(y == 0 || (x/y) > 1.2){
-				if(enabled)disableZoom();
-			}else if( !enabled )restoreZoom();
+    function restoreZoom() {
+      meta.setAttribute('content', enabledZoom)
+      enabled = true
     }
 
-		w.addEventListener( "orientationchange", restoreZoom, false );
-		w.addEventListener( "devicemotion", checkTilt, false );
+    function disableZoom() {
+      meta.setAttribute('content', disabledZoom)
+      enabled = false
+    }
 
-	}
+    function checkTilt(e) {
 
-})( this );
+      // If landscape, return.
+      if(90 === Math.abs(w.orientation)) {
+        if(enabled) restoreZoom()
+        return
+      } 
+
+      aig = e.accelerationIncludingGravity
+      x = Math.abs(aig.x)
+      y = Math.abs(aig.y)
+
+      // If in the danger zone where x is much greater than y, turn zoom off.
+      if(y === 0 || (x/y) > 1.2) {
+        if(enabled) disableZoom()
+      } else if(!enabled) restoreZoom()
+    }
+
+    w.addEventListener('orientationchange', restoreZoom, !1)
+    w.addEventListener('devicemotion', checkTilt, !1)
+
+  }
+
+
+})(document, this, navigator, location, 'standalone')
