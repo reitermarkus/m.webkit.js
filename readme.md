@@ -62,21 +62,21 @@ There are three styles to choose from: `default`, `black`, and `black-translucen
 
     <meta name=apple-mobile-web-app-status-bar-style content=default>  
 
-### Add a startup image
+### Add a Startup Image
+If you want to give your web app eyecandy, add a startup image. Note that the media queries have to be that specific or else the images won't be loaded. Also note that because of the status bar all images have to be 20px (40px for Retina graphics) shorter than the screen resolution.
 
-    
-    <!-- Retina iPad -->
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-2048x1536.png" sizes=2048x1536>
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-1536x2048.png" sizes=1536x2048>
-    <!-- iPad and iPad mini -->
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-1024x768.png" sizes=1024x768>
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-768x1024.png" sizes=768x1024>
-    <!-- iPhone 5 -->
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-640x1136.png" sizes=640x1136>
-    <!-- Retina iPhone -->
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-640x960.png" sizes=640x960>
     <!-- iPhone -->
-    <link rel=apple-touch-startup-image href="apple-touch-startup-image-320x480.png">
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-320x460.png media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
+    <!-- Retina iPhone -->
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-640x920.png media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+    <!-- iPhone 5 -->
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-640x1096.png media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+    <!-- iPad -->
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-768x1004.png media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)">
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-1024x748.png media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)">
+    <!-- Retina iPad -->
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-1536x2008.png media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+    <link rel=apple-touch-startup-image href=apple-touch-startup-image-2048x1496.png media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
 
 
 ## Disable automatic Phone-Number-Detection
