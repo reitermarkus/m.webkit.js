@@ -51,17 +51,17 @@
     var initialContent = meta && meta.getAttribute('content')
        ,disabledZoom = initialContent + ',maximum-scale=1'
        ,enabledZoom = initialContent + ',maximum-scale=10'
-       ,enabled = true
+       ,enabled = 1
        ,x, y, z, aig
 
     function restoreZoom() {
       meta.setAttribute('content', enabledZoom)
-      enabled = true
+      enabled = 1
     }
 
     function disableZoom() {
       meta.setAttribute('content', disabledZoom)
-      enabled = false
+      enabled = 0
     }
 
     function checkTilt(e) {
